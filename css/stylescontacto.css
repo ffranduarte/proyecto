@@ -1,0 +1,183 @@
+body {
+    display: flex; /* Utiliza el modelo de caja flexible para el cuerpo del documento */
+    justify-content: center; /* Centra horizontalmente el contenido del cuerpo */
+    align-items: center; /* Centra verticalmente el contenido del cuerpo */
+    background-image: url('../imagenes/fondo.jpg'); /* Aplica una imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
+.container {
+    display: grid; /* Utiliza el modelo de caja de cuadrícula para el contenedor */
+    grid-template-columns: repeat(2, 50%); /* Define dos columnas de igual tamaño (50%) */
+    padding: 20px; /* Agrega un relleno de 20px dentro del contenedor */
+    gap: 10px; /* Define un espacio de 10px entre los elementos de la cuadrícula */
+    width: 1000px; /* Define un ancho fijo de 1000px para el contenedor */
+}
+
+.box-info {
+    color: #240505; /* Define el color del texto como un marrón oscuro */
+    display: flex; /* Utiliza el modelo de caja flexible para el contenedor */
+    flex-direction: column; /* Organiza los elementos de forma vertical */
+    gap: 50px; /* Define un espacio de 50px entre los elementos hijos */
+}
+
+.box-info > h1 {
+    text-align: left; /* Alinea el texto a la izquierda */
+    letter-spacing: 5px; /* Añade un espacio de 5px entre las letras */
+}
+
+.data {
+    display: flex; /* Utiliza el modelo de caja flexible para el contenedor */
+    flex-direction: column; /* Organiza los elementos de forma vertical */
+    gap: 20px; /* Define un espacio de 20px entre los elementos hijos */
+}
+
+.data > p {
+    font-size: 1rem; /* Define el tamaño de fuente de los párrafos como 1 rem */
+}
+
+.data > p > i {
+    color: rgb(0, 3, 16); /* Define el color del ícono como un negro oscuro */
+    margin-right: 10px; /* Agrega un margen derecho de 10px al ícono */
+    font-size: 25px; /* Define el tamaño de fuente del ícono como 25px */
+}
+
+.links {
+    display: flex; /* Utiliza el modelo de caja flexible para el contenedor */
+    gap: 15px; /* Define un espacio de 15px entre los enlaces */
+}
+
+.links > a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    width: 40px; /* Define un ancho fijo de 40px para los enlaces */
+    height: 40px; /* Define una altura fija de 40px para los enlaces */
+    background: rgb(0, 0, 0); /* Define el color de fondo como negro */
+    text-align: center; /* Centra el texto dentro del enlace */
+    transition: .1s; /* Agrega una transición suave de 0.1 segundos para las propiedades cambiantes */
+}
+
+.links > a > i {
+    color: #fff; /* Define el color del ícono dentro del enlace como blanco */
+    line-height: 40px; /* Centra verticalmente el ícono dentro del enlace */
+    font-size: 20px; /* Define el tamaño de fuente del ícono como 20px */
+}
+
+form {
+    display: flex; /* Utiliza el modelo de caja flexible para el formulario */
+    flex-direction: column; /* Organiza los elementos de forma vertical */
+    text-align: center; /* Centra el texto dentro del formulario */
+    gap: 15px; /* Define un espacio de 15px entre los elementos hijos */
+}
+
+.input-box {
+    position: relative; /* Posiciona los elementos hijos en relación a este contenedor */
+}
+
+.input-box > input {
+    width: 100%; /* Define el ancho del input como 100% del contenedor padre */
+    height: 40px; /* Define una altura fija de 40px para el input */
+    padding: 0 10px; /* Agrega un relleno interno de 10px horizontal al input */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    background: rgba(248, 54, 54, 0.1); /* Define un fondo semitransparente de color rojo claro */
+    border: 3px solid transparent; /* Define un borde transparente de 3px */
+    letter-spacing: 1px; /* Añade un espacio de 1px entre las letras */
+    transition: .3s; /* Agrega una transición suave de 0.3 segundos para las propiedades cambiantes */
+    color: #000000; /* Define el color del texto como negro */
+}
+
+.input-box > input:focus, .input-box > textarea:focus {
+    border-bottom: 3px solid crimson; /* Cambia el borde inferior a rojo oscuro cuando el input está enfocado */
+}
+
+.input-box > input::placeholder, .input-box > textarea::placeholder {
+    color: #000000; /* Define el color del placeholder como negro */
+}
+
+.input-box > input:focus::placeholder, .input-box > textarea:focus::placeholder {
+    color: transparent; /* Hace el placeholder transparente cuando el input está enfocado */
+}
+
+.input-box > textarea {
+    width: 100%; /* Define el ancho del textarea como 100% del contenedor padre */
+    height: 130px; /* Define una altura fija de 130px para el textarea */
+    background: rgba(248, 54, 54, 0.1); /* Define un fondo semitransparente de color rojo claro */
+    border: 3px solid transparent; /* Define un borde transparente de 3px */
+    letter-spacing: 1px; /* Añade un espacio de 1px entre las letras */
+    transition: .3s; /* Agrega una transición suave de 0.3 segundos para las propiedades cambiantes */
+    color: #000000; /* Define el color del texto como negro */
+    padding: 10px; /* Agrega un relleno interno de 10px al textarea */
+}
+
+.input-box > i {
+    color: rgba(255, 255, 255, 0.3); /* Define el color del ícono como blanco semitransparente */
+    position: absolute; /* Posiciona el ícono de forma absoluta dentro del contenedor */
+    top: 50%; /* Centra verticalmente el ícono */
+    transform: translateY(-50%); /* Ajusta el posicionamiento vertical del ícono */
+    right: 15px; /* Define una posición de 15px desde el borde derecho del contenedor */
+}
+
+.input-box > input:focus ≈ i {
+    color: crimson; /* Cambia el color del ícono a rojo oscuro cuando el input está enfocado */
+}
+
+form > button {
+    background: crimson; /* Define el color de fondo del botón como rojo oscuro */
+    color: #fff; /* Define el color del texto del botón como blanco */
+    border: none; /* Elimina el borde del botón */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando está sobre el botón */
+    font-size: 1rem; /* Define el tamaño de fuente del botón como 1 rem */
+    padding: 10px; /* Agrega un relleno interno de 10px al botón */
+}
+
+form > button:hover, .links > a:hover {
+    background: rgb(109, 5, 26); /* Cambia el color de fondo a un rojo más oscuro cuando se pasa el mouse */
+}
+
+
+
+
+
+
+/* Estilos para el botón dentro del formulario */
+form > button {
+    background: crimson;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center; /* Alinea el texto al centro */
+    transition: background 0.3s; /* Añade una transición suave para el cambio de fondo */
+}
+
+/* Estilos para el enlace que contiene el botón */
+.button-link {
+    text-decoration: none; /* Elimina la subrayado del enlace */
+    display: inline-block; /* Permite que el enlace se comporte como un elemento en línea */
+}
+
+/* Aplica los estilos del botón dentro del enlace */
+.button-link > button {
+    all: unset; /* Elimina todos los estilos predeterminados del botón */
+    display: inline-block; /* Asegura que el botón se comporte como un elemento en línea */
+    padding: 10px; /* Añade un relleno dentro del botón */
+    background: crimson; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1rem; /* Establece el tamaño de la fuente */
+    text-align: center; /* Alinea el texto al centro */
+    transition: background 0.3s; /* Añade una transición suave para el cambio de fondo */
+}
+
+/* Estilos para el hover del botón */
+form > button:hover, .button-link > button:hover {
+    background: rgb(109, 5, 26); /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilos para los enlaces dentro de .links */
+.links > a:hover {
+    background: rgb(109, 5, 26); /* Cambia el color de fondo al pasar el cursor */
+}
